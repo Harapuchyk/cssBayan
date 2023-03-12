@@ -54,11 +54,6 @@ details summary::-webkit-details-marker {
   cursor: pointer;
   opacity: 1;
 }
-
-.bayan-title:hover .bayan-item{
-  
-}
-
 .wrapper-bayan:hover {
   cursor: pointer;
 }
@@ -87,8 +82,16 @@ details summary::-webkit-details-marker {
 }
 .bayan-content-img {
   width: 50%;
+  opacity: 0.8;
 }
-
+.bayan-content-img:active {
+  transform: scale(1.05);
+  transition: 0.3s all;
+}
+.bayan-content-img:hover {
+  opacity: 1;
+  transition: 0.3s all;
+}
 @media screen  and (max-width: 1920px) {
 
 }
