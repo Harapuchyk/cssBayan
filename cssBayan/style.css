@@ -1,0 +1,123 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family:Georgia, 'Times New Roman', Times, serif;
+  line-height: 1.2;
+  background-color: #e6e6e6;
+}
+h1 {
+  width: 90%;
+  font-size: 50px;
+}
+summary {
+  display: block;
+  width: 90%;
+}
+details summary::-webkit-details-marker {
+  display: none;
+}
+.wrapper-main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding-top: 5%;
+}
+.wrapper-bayan{
+  width: 90%;
+}
+.bayan-item {
+  background-color: #e6e6e6;
+  color: rgb(57, 40, 153);
+  position: relative;
+}
+.bayan-title {
+  width: 100%;
+  text-align: start;
+  font-size: 2vw;
+  color: rgb(82, 62, 196);
+  background-color: #ece7e7;
+  outline: none;
+  border-bottom: 1px solid #211458;
+  cursor: pointer;
+  padding: 1%;
+  position: relative;
+  transition: 0.3s all;
+}
+.bayan-title:hover {
+  background-color: #dbcd7e;
+}
+.wrapper-bayan:hover .bayan-title::after {
+  cursor: pointer;
+  opacity: 1;
+}
+.wrapper-bayan:hover {
+  cursor: pointer;
+}
+.bayan-title::after {
+  display: block;
+  content: "➕";
+  font-size: 2vw;
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: 0.3s all;
+  opacity: 0;
+}
+.bayan-item:not([open]):last-child .bayan__title {
+  border: none;
+}
+.bayan-item[open] .bayan-title::after {
+  transform: translateY(-50%) rotate(45deg);
+}
+.bayan-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2%;
+}
+.bayan-content-img {
+  width: 50%;
+  opacity: 0.8;
+}
+.bayan-content-img:active {
+  transform: scale(1.05);
+  transition: 0.3s all;
+}
+.bayan-content-img:hover {
+  opacity: 1;
+  transition: 0.3s all;
+}
+@media screen  and (max-width: 1920px) {
+
+}
+@media screen  and (max-width: 820px) {
+  h1 {
+    font-size: 30px;
+  }
+  .bayan-title {
+
+    font-size: 2.5vw;
+    
+  }
+  .bayan-content-img {
+    width: 60%;
+  }
+}
+@media screen  and (max-width: 320px) {
+  h1 {
+    font-size: 20px;
+  }
+  .bayan-title {
+
+    font-size: 4vw;
+    
+  }
+  .bayan-content-img {
+    width: 70%;
+  }
+}
