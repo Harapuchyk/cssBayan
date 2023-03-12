@@ -1,0 +1,67 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family:Georgia, 'Times New Roman', Times, serif;
+  line-height: 1.2;
+  background-color: #e6e6e6;
+}
+summary {
+  display: block;
+  width: 90%;
+}
+details summary::-webkit-details-marker {
+  display: none;
+}
+.wrapper-main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+.wrapper-bayan{
+  width: 90%;
+}
+.bayan-item {
+  background-color: #e7dada;
+  color: rgb(57, 40, 153);
+  position: relative;
+}
+.bayan-title {
+  width: 100%;
+  text-align: center;
+  font-size: 2vw;
+  color: rgb(82, 62, 196);
+  background-color: #ece7e7;
+  outline: none;
+  border-bottom: 1px solid #777;
+  cursor: pointer;
+  padding: 1%;
+  position: relative;
+  transition: 0.3s all;
+}
+.bayan-title:hover {
+  background-color: #dbcd7e;
+}
+.bayan-title::after {
+  display: block;
+  content: "➕";
+  font-size: 2vw;
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: 0.3s all;
+}
+.bayan-item:not([open]):last-child .bayan__title {
+  border: none;
+}
+.bayan-item[open] .bayan-title::after {
+  transform: translateY(-50%) rotate(45deg);
+}
+.bayan-content {
+  padding: 2%;
+}
